@@ -1,0 +1,275 @@
+{
+  "speech_settings" : {
+    "voice" : "en-in"
+  },
+  "script" : [
+    { "speech" : "Welcome to Bikram yoga" },
+
+    { "sequence" : "vande_gurunam_caranaravinde" },
+
+    { "sequence" : "pranayama_sequence_10" },
+
+    { "sequence" : "half_moon_60" },
+    { "sequence" : "half_moon_30" },
+    { "sequence" : "awkward_series_60" },
+    { "sequence" : "eagle_pose_60" },
+    { "sequence" : "standing_head_to_knee_60" },
+    { "sequence" : "standing_head_to_knee_30" },
+    { "sequence" : "standing_bow_pulling_pose_60" },
+    { "sequence" : "standing_bow_pulling_pose_30" },
+    { "sequence" : "balancing_stick" },
+    { "sequence" : "standing_separate_leg_stretching" },
+    { "sequence" : "triangle_pose_60" },
+    { "sequence" : "triangle_pose_30" },
+    { "sequence" : "pyramid_pose_60" },
+    { "sequence" : "pyramid_pose_30" },
+    { "sequence" : "tree_pose" },
+    { "sequence" : "corpse_pose" },
+    { "speech" : "This marks the end of the standing sequence.", "duration" : 10 },
+
+    { "speech" : "Thank yourself for your effort in class today.", "duration" : 15 },
+    { "speech" : "नमस्ते", "duration" : 0 }
+  ],
+  "sequences" : {
+    "pranayama_sequence_10" : [
+      { "speech" : "Prāṇāyāma breathing.", "duration" : 2 },
+      { "sequence" : "pranayama_breathing" },
+      { "sequence" : "pranayama_breathing" },
+      { "sequence" : "pranayama_breathing" },
+      { "speech" : "Now without counting outloud.", "duration" : 0 },
+      { "sequence" : "pranayama_breathing_no_count" },
+      { "sequence" : "pranayama_breathing_no_count" },
+      { "sequence" : "pranayama_breathing_no_count" },
+      { "sequence" : "pranayama_breathing_no_count" },
+      { "sequence" : "pranayama_breathing_no_count" },
+      { "sequence" : "pranayama_breathing_no_count" },
+      { "sequence" : "pranayama_breathing_no_count" },
+      { "sequence" : "pranayama_breathing_no_count" },
+      { "speech" : "Tāḍāsana. Rest your arms by your sides", "duration" : 15 }
+    ],
+    "pranayama_breathing" : [
+      { "speech" : "breeth in.", "duration" : 1 },
+      { "count_up" : 6, "duration" : 1 },
+      { "speech" : "breeth out.", "duration" : 1  },
+      { "count_down" : 6, "duration" : 1 }
+    ],
+    "pranayama_breathing_no_count" : [
+      { "speech" : "breeth in.", "duration" : 6 },
+      { "speech" : "breeth out.", "duration" : 6  }
+    ],
+
+    "half_moon_60" : [
+      { "speech" : "Half moon series, 1 minute.", "duration" : 3 },
+      { "speech" : "Ardha Chandrasana. Bend to your right.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "sound" : "./A-Tone-His_Self-1266414414.mp3" },
+      { "speech" : "Urdhva Hastasana. Back to center.", "duration" : 5 },
+
+      { "speech" : "Ardha Chandrasana. Bend to your left.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "sound" : "./A-Tone-His_Self-1266414414.mp3" },
+      { "speech" : "Urdhva Hastasana. Back to center.", "duration" : 5 },
+
+      { "speech" : "Urdhva Hastasana back bending.", "duration" : 15 },
+      { "sound" : "./A-Tone-His_Self-1266414414.mp3" },
+      { "speech" : "Urdhva Hastasana. Back to center.", "duration" : 5 },
+
+      { "speech" : "Uttānāsana. Forward fold.", "duration": 0 }, 
+      { "speech" : "20 seconds free movement.", "duration" : 20 },
+      { "speech" : "Pada Hastasana. Grab your heels from behind and tuck forearms behind calves, shoulders relaxed and away from ears.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "sound" : "./A-Tone-His_Self-1266414414.mp3" },
+      { "speech" : "Urdhva Hastasana. Back to center, with arms forward and flat back as you come up.", "duration" : 5 },
+      { "speech" : "Tāḍāsana. Rest your arms by your sides", "duration" : 5 }
+    ],
+
+    "half_moon_30" : [
+      { "speech" : "Half moon series, 30 seconds.", "duration" : 3 },
+      { "speech" : "Ardha Chandrasana. Bend to your right.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "sound" : "./A-Tone-His_Self-1266414414.mp3" },
+      { "speech" : "Urdhva Hastasana. Back to center.", "duration" : 5 },
+
+      { "speech" : "Ardha Chandrasana. Bend to your left.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "sound" : "./A-Tone-His_Self-1266414414.mp3" },
+      { "speech" : "Urdhva Hastasana. Back to center.", "duration" : 5 },
+
+      { "speech" : "Urdhva Hastasana back bending.", "duration" : 15 },
+      { "sound" : "./A-Tone-His_Self-1266414414.mp3" },
+      { "speech" : "Urdhva Hastasana. Back to center.", "duration" : 5 },
+
+      { "speech" : "Uttānāsana. Forward fold.", "duration": 0 }, 
+      { "speech" : "20 seconds free movement.", "duration" : 20 },
+      { "speech" : "Pada Hastasana. Grab your heels from behind and tuck forearms behind calves, shoulders relaxed and away from ears.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "sound" : "./A-Tone-His_Self-1266414414.mp3" },
+      { "speech" : "Urdhva Hastasana. Back to center, with arms forward and flat back as you come up.", "duration" : 5 },
+      { "speech" : "Tāḍāsana. Rest your arms by your sides", "duration" : 5 }
+    ],
+
+    "awkward_series_60" : [
+      { "speech" : "Awkward series.", "duration" : 3 },
+
+      { "speech" : "Urdhva Hastasana. Stretch arms out.", "duration" : 5 },
+
+      { "speech" : "Utkatasana. Chair pose.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Tāḍāsana. Keep arms out.", "duration" : 5 },
+
+      { "speech" : "Utkatasana with heels lifted high.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Tāḍāsana. Keep arms out.", "duration" : 5 },
+
+      { "speech" : "Utkatasana knees in and heels lifted slightly.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Tāḍāsana, let arms rest by your side.", "duration" : 5 }
+    ],
+
+    "eagle_pose_60" : [
+      { "speech" : "Garurasana. Eagle pose.", "duration" : 1 },
+      { "speech" : "Urdhva Hastasana. Arms up by your ears.", "duration" : 1 },
+
+      { "speech" : "Swing right arm under left, Utkatasana, chair pose, flat vertical back, right leg over left, elbows and knees in a straight line down your center.", "duration" : 15 },
+      { "skip_count_down" : 45, "duration" : 15 },
+      { "speech" : "Urdhva Hastasana. Arms up by your ears.", "duration" : 1 },
+
+      { "speech" : "Left side.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Tāḍāsana, let arms rest by your side.", "duration" : 5 }
+    ],
+    "standing_head_to_knee_60" : [
+      { "speech" : "Daṇḍāyamana Jānuśīrṣāsana. Standing head to knee pose", "duration" : 5 },
+      { "speech" : "Right side, lift right leg 90 degrees, bend down and hold your foot. Keep left leg straight and flexed, slowly rise by straightening your right leg.", "duration" : 15 },
+      { "skip_count_down" : 45, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3 },
+      { "speech" : "Tāḍāsana. Rest your arms by your sides", "duration" : 5 },
+      { "speech" : "Left side, lift left leg 90 degrees, bend down and hold your foot. Keep right leg straight and flexed, slowly rise by straightening your left leg.", "duration" : 15 },
+      { "skip_count_down" : 45, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3 },
+      { "speech" : "Tāḍāsana. Mountain pose.", "duration" : 5 }
+    ],
+    "standing_head_to_knee_30" : [
+      { "speech" : "Daṇḍāyamana, Jānuśīrṣāsana. Standing head to knee pose", "duration" : 5 },
+      { "speech" : "Right side. Begin.", "duration" : 15 },
+      { "skip_count_down" : 15, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3 },
+      { "speech" : "Tāḍāsana. Mountain pose.", "duration" : 5 },
+      { "speech" : "Left side. Begin.", "duration" : 15 },
+      { "skip_count_down" : 15, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3 },
+      { "speech" : "Tāḍāsana. Mountain pose.", "duration" : 5 }
+    ],
+    "standing_bow_pulling_pose_60" : [
+      { "speech" : "Daṇḍāyamana, Dhanurāsana. Standing bow pulling pose. One minute.", "duration" : 5 },
+      { "speech" : "Right side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Slowly reverse out." },
+      { "speech" : "Urdhva Hastasana, mountain pose.", "duration" : 5 },
+      { "speech" : "Left side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3  },
+      { "speech" : "Ūrdhva Hastāsana, mountain pose.", "duration" : 5 }
+    ],
+    "standing_bow_pulling_pose_30" : [
+      { "speech" : "Daṇḍāyamana, Dhanurāsana. Standing bow pulling pose. 30 seconds.", "duration" : 5 },
+      { "speech" : "Right side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3  },
+      { "speech" : "Ūrdhva Hastāsana, mountain pose.", "duration" : 5 },
+      { "speech" : "Left side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3  },
+      { "speech" : "Ūrdhva Hastāsana, mountain pose.", "duration" : 5 }
+    ],
+    "balancing_stick" : [
+      { "speech" : "Tulādaṇḍāsana. Balancing stick pose.", "duration" : 1 },
+      { "speech" : "Ūrdhva Hastāsana. Step to back of mat, arms up, hands together, index fingers pointing.", "duration" : 3 },
+      { "speech" : "Right side. Begin.", "duration" : 20 },
+      { "speech" : "Ūrdhva Hastāsana. Step to back of mat, arms up, hands together, index fingers pointing.", "duration" : 3 },
+      { "speech" : "Left side. Begin.", "duration" : 20 },
+      { "speech" : "Ūrdhva Hastāsana. Step to back of mat, arms up, hands together, index fingers pointing.", "duration" : 3 },
+      { "speech" : "Tāḍāsana. Rest your arms by your sides", "duration" : 5 }
+    ],
+    "standing_separate_leg_stretching" : [
+      { "speech" : "Daṇḍāyamana, Vibhaktapāda, Paścimottānāsana. Standing Separate Leg Stretching Pose.", "duration" : 2 },
+      { "speech" : "Step sideways on mat, arms spread out, feet just past elbow width.", "duration" : 5 },
+      { "speech" : "Bend over with flat back and grab outsides of feet.", "duration" : 5 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3  },
+      { "speech" : "With flat back.", "duration" : 3  },
+      { "speech" : "Step back to front of mat.", "duration" : 5 },
+      { "speech" : "Tāḍāsana. Mountain pose.", "duration" : 5 }
+    ],
+    "triangle_pose_60" : [
+      { "speech" : "Trikoṇāsana. Triangle pose. One minute.", "duration" : 1 },
+      { "speech" : "Step sideways on mat, arms spread out, feet about hands width apart.", "duration" : 0 },
+      { "speech" : "Right side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 10 },
+      { "speech" : "Trikoṇāsana.", "duration" : 0 },
+      { "speech" : "Left side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3  },
+      { "speech" : "Step back to front of mat.", "duration" : 1 },
+      { "speech" : "Tāḍāsana. Mountain pose.", "duration" : 5 }
+    ],
+    "triangle_pose_30" : [
+      { "speech" : "Trikoṇāsana. Triangle pose. 30 seconds.", "duration" : 0 },
+      { "speech" : "Step sideways on mat, arms spread out, feet about hands width āpart.", "duration" : 0 },
+      { "speech" : "Right side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 10 },
+      { "speech" : "Trikoṇāsana.", "duration" : 0 },
+      { "speech" : "Left side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3  },
+      { "speech" : "Step back to front of mat.", "duration" : 5 },
+      { "speech" : "Tāḍāsana. Mountain pose.", "duration" : 5 }
+    ],
+    "pyramid_pose_60" : [
+      { "speech" : "Daṇḍāyamana, Vibhaktapāda, Jānuśīrṣāsana. Pyramid pose. One minute.", "duration" : 5 },
+      { "speech" : "Step to the right sideways on mat, arms spread out, feet about elbow width āpart.", "duration" : 5 },
+      { "speech" : "Right side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3 },
+      { "speech" : "Left side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 60, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3  },
+      { "speech" : "Step back to front of mat.", "duration" : 0 },
+      { "speech" : "Tāḍāsana. Mountain pose.", "duration" : 7 }
+    ],
+    "pyramid_pose_30" : [
+      { "speech" : "Daṇḍāyamana, Vibhaktapāda, Jānuśīrṣāsana. Pyramid pose. One minute.", "duration" : 5 },
+      { "speech" : "Step to the right sideways on mat, arms spread out, feet about elbow width apart.", "duration" : 5 },
+      { "speech" : "Right side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3 },
+      { "speech" : "Left side. Begin.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3  },
+      { "speech" : "Step back to front of mat.", "duration" : 0 },
+      { "speech" : "Tāḍāsana. Mountain pose.", "duration" : 7 }
+    ],
+    "tree_pose" : [
+      { "speech" : "Vṛkṣāsana. Tree pose.", "duration" : 5 },
+      { "speech" : "Right side.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 10 },
+      { "speech" : "Left side.", "duration" : 0 },
+      { "skip_count_down" : 30, "duration" : 15 },
+      { "speech" : "Slowly reverse out.", "duration" : 3  },
+      { "speech" : "Tāḍāsana. Mountain pose.", "duration" : 5 }
+    ],
+    "corpse_pose" : [
+      { "speech" : "Savasana. Lie down flat on back, head facing top of mat.", "duration" : 60 }
+    ],
+    "vande_gurunam_caranaravinde" : [
+      { "speech" : "वन्दे गुरूणां चरणारविन्दे सन्दर्शित स्वात्म सुखावबोधे", "duration" : 1 },
+      { "speech" : "निःश्रेयसे जाङलिकायमाने संसर हालाहल मोहशान्त्यै ", "duration" : 1 },
+      { "speech" : "आबाहु पुरुशाकारं शंन्खचक्रासि धारिणम् ", "duration" : 1 },
+      { "speech" : "सहस्र शिर्समं श्वेतमं प्रणमामि पतञ्जलिम्", "duration" : 1 }
+    ]
+
+  }
+}
