@@ -3,7 +3,7 @@
     "voice" : "en-in"
   },
   "script" : [
-    { "sound" : "./zen_temple_bell_1.mp3" },
+    { "sound" : "zen_temple_bell_1.mp3" },
     { "speech" : "Welcome to Bikram yoga" },
 
     { "sequence" : "pranayama_sequence_10", "id": 1 },
@@ -11,32 +11,28 @@
     { "sequence" : "half_moon_30" },
     { "sequence" : "awkward_series_60", "id": 3 },
     { "sequence" : "eagle_pose_60", "id": 4 },
-    { "sequence" : "standing_head_to_knee_60", "id": 5 },
-    { "sequence" : "standing_head_to_knee_30", "id": 6 },
-    { "sequence" : "standing_bow_pulling_pose_60", "id": 7 },
-    { "sequence" : "standing_bow_pulling_pose_30", "id": 8 },
-    { "sequence" : "balancing_stick", "id": 9 },
-    { "sequence" : "standing_separate_leg_stretching", "id": 12 },
-    { "sequence" : "triangle_pose_60", "id": 13 },
-    { "sequence" : "triangle_pose_30" },
-    { "sequence" : "pyramid_pose_60", "id": 14 },
-    { "sequence" : "pyramid_pose_30" },
-    { "sequence" : "tree_pose", "id": 15 },
-    { "sequence" : "corpse_pose", "id": 16 },
-    { "speech" : "This marks the end of the standing sequence.", "duration" : 10 },
-    { "sequence" : "wind_removing", "id": 17 },
-    { "sequence" : "situp_instructional", "id": 18 },
-    { "sequence" : "cobra_pose" },
+    { "sequences" : [ "standing_head_to_knee_60", "standing_head_to_knee_30" ], "id": 5 },
+    { "sequences" : [ "standing_bow_pulling_pose_60", "standing_bow_pulling_pose_30" ], "id": 6 },
+    { "sequence" : "balancing_stick", "id": 7 },
+    { "sequence" : "standing_separate_leg_stretching", "id": 8 },
+    { "sequences" : [ "triangle_pose_60", "triangle_pose_30" ], "id": 9 },
+    { "sequences" : [ "pyramid_pose_60", "pyramid_pose_30" ], "id": 10 },
+    { "sequence" : "tree_pose", "id": 11 },
+    { "sequence" : "corpse_pose", "id": 12 },
+    { "speech" : "This marks the end of the standing sequence.", "duration" : 13 },
+    { "sequence" : "wind_removing", "id": 14 },
+    { "sequence" : "situp_instructional", "id": 15 },
+    { "sequence" : "cobra_pose", "id" : 16 },
 
-    { "sequence" : "locust_pose", "id": 19  },
-    { "sequence" : "bow_pose", "id": 20 },
-    { "sequence" : "fixed_firm_pose", "id": 21 },
-    { "sequence" : "half_tortoise_pose", "id": 22 },
-    { "sequence" : "camel_pose", "id": 23 },
-    { "sequence" : "rabbit_pose", "id": 24  },
-    { "sequence" : "head_to_knee_pose", "id": 25 },
-    { "sequence" : "spine_twising_pose", "id": 26 },
-    { "sequence" : "blowing_in_firm", "id": 27 },
+    { "sequence" : "locust_pose", "id": 17  },
+    { "sequence" : "bow_pose", "id": 18 },
+    { "sequence" : "fixed_firm_pose", "id": 19 },
+    { "sequence" : "half_tortoise_pose", "id": 20 },
+    { "sequence" : "camel_pose", "id": 21 },
+    { "sequence" : "rabbit_pose", "id": 22  },
+    { "sequence" : "head_to_knee_pose", "id": 23 },
+    { "sequence" : "spine_twising_pose", "id": 24 },
+    { "sequence" : "blowing_in_firm", "id": 25 },
 
     { "speech" : "Thank yourself for your effort in class today.", "duration" : 15 },
     { "speech" : "नमस्ते", "duration" : 0 }
@@ -44,29 +40,23 @@
   "sequences" : {
     "pranayama_sequence_10" : [
       { "speech" : "Prāṇāyāma breathing.", "duration" : 2 },
-      { "sequence" : "pranayama_breathing" },
-      { "sequence" : "pranayama_breathing" },
-      { "sequence" : "pranayama_breathing" },
+      { "sequences" : [ "pranayama_breathing", "pranayama_breathing", "pranayama_breathing" ] },
       { "speech" : "Now without counting outloud.", "duration" : 0 },
-      { "sequence" : "pranayama_breathing_no_count" },
-      { "sequence" : "pranayama_breathing_no_count" },
-      { "sequence" : "pranayama_breathing_no_count" },
-      { "sequence" : "pranayama_breathing_no_count" },
-      { "sequence" : "pranayama_breathing_no_count" },
-      { "sequence" : "pranayama_breathing_no_count" },
-      { "sequence" : "pranayama_breathing_no_count" },
-      { "sequence" : "pranayama_breathing_no_count" },
+      { "sequences" : [ "pranayama_breathing_no_count", "pranayama_breathing_no_count", "pranayama_breathing_no_count", 
+                        "pranayama_breathing_no_count", "pranayama_breathing_no_count", "pranayama_breathing_no_count", 
+                        "pranayama_breathing_no_count" 
+      ] },
       { "speech" : "Tāḍāsana. Rest your arms by your sides", "duration" : 15 }
     ],
     "pranayama_breathing" : [
-      { "speech" : "breeth in.", "duration" : 1 },
+      { "speech" : "breathe in.", "duration" : 1 },
       { "count_up" : 6, "duration" : 1 },
-      { "speech" : "breeth out.", "duration" : 1  },
+      { "speech" : "breathe out.", "duration" : 1  },
       { "count_down" : 6, "duration" : 1 }
     ],
     "pranayama_breathing_no_count" : [
-      { "speech" : "breeth in.", "duration" : 6 },
-      { "speech" : "breeth out.", "duration" : 6  }
+      { "speech" : "breathe in.", "duration" : 6 },
+      { "speech" : "breathe out.", "duration" : 6  }
     ],
 
     "half_moon_60" : [
