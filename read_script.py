@@ -7,6 +7,8 @@ from num2words import num2words
 
 speech_dict = {}
 devnull = open(os.devnull, 'w')
+cache_dir = "~/.yojana/cache"
+script_dir = '.'
 
 def wait_until( t ):
     while( t > time.time() ):
@@ -24,14 +26,14 @@ def play_music(music_file, volume=0.8):
     #buffer = 2048    # number of samples (experiment to get best sound)
     # volume value 0.0 to 1.0
     try:
-        subprocess.run( ["play", "--type", "mp3", "--volume", str(volume), '-V1', music_file ], stdout=devnull, stderr=devnull )
+        subprocess.run( ["play", "--type", "mp3", "--volume", str(volume), '--buffer', '4096', '-V1', music_file ], stdout=devnull, stderr=devnull )
     except Exception as e:
         print("File {} not found! {}".format(music_file, str(e) ))
         return
 
-def cache_words( words, cache_dir='./', voice = "en-in" ):
+def cache_words( words, cache_dir, voice = "en-in" ):
     words_hash = hashlib.md5( words.encode() ).hexdigest()
-    c_path = cache_dir + words_hash + '.' + voice + '.mp3' 
+    c_path = '/'.join( [ cache_dir, words_hash + '.' + voice + '.mp3' ] )
     if words not in speech_dict:
         if os.path.exists( c_path ):
             speech_dict[ words ] = c_path
@@ -48,7 +50,7 @@ def say_now( words, voice ):
     print( words, end = ' ' )
     sys.stdout.flush()
 
-    play_music( cache_words( words, voice=voice ) )
+    play_music( cache_words( words, cache_dir, voice=voice ) )
 
 def do_sequence( sequence, script, start_at = 0 ):
     voice = script["speech_settings"]["voice"]
@@ -68,7 +70,7 @@ def do_sequence( sequence, script, start_at = 0 ):
 
             if "sound" in i:
                 print('play sound: ', i["sound"], end=' ' )
-                play_music(i["sound"])
+                play_music( '/'.join( [ script_dir, i["sound"] ] ) )
                 wait_until( end_et )
             elif "speech"  in i:
                 say_now(i["speech"], voice )
@@ -98,29 +100,48 @@ def do_sequence( sequence, script, start_at = 0 ):
 
 parser = argparse.ArgumentParser( description='Script reader' )
 parser.add_argument( 'script', type=str )
+parser.add_argument( '--voice', type=str )
 parser.add_argument( '--skip', type=int )
 args = parser.parse_args()
 
 with open( args.script ) as script_file:
-    script = json.load( script_file )
-    voice = script["speech_settings"]["voice"]
+    script_dir = os.path.dirname( args.script )
 
-    if script["speech_settings"]:
+    script = json.load( script_file )
+    voice = "en-in"
+
+    if not os.path.exists( cache_dir ):
+        try:
+            os.makedirs(cache_dir)
+        except OSError:
+            print( "Unable to make cache directory %s" % cache_dir )
+            sys.exit()
+
+    if "speech_settings" in script:
         for k, v in script["speech_settings"].items():
-            print( k, v )
-    print("precaching speech")
+            if "voice" == k:
+                voice = v
+                if args.voice:
+                    voice = args.voice
+    print( "voice:", voice )
+
+    #cache some numbers
     for n in range( 10, 0, -1):
-        cache_words( num2words(n), voice=voice )
+        cache_words( num2words(n), cache_dir, voice=voice )
+
+    for n in [ 15, 30, 45, 60 ]:
+        cache_words( num2words(n), cache_dir, voice=voice )
 
     if "script" in script:
         for i in script["script"]:
             if "speech"  in i:
-                cache_words(i["speech"], voice=voice)
-
-    for n in [ 15, 30, 45, 60 ]:
-        cache_words( num2words(n), voice=voice )
+                cache_words(i["speech"], cache_dir, voice=voice)
 
     if "script" in script:
-        do_sequence( script["script"], script, start_at=args.skip )
+        start_at = 0
+        if args.skip:
+            start_at = args.skip
+
+        do_sequence( script["script"], script, start_at=start_at )
 
 

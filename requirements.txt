@@ -1,0 +1,7 @@
+pip 
+setuptools 
+wheel 
+virtualenv
+num2words
+gtts
+num2words
