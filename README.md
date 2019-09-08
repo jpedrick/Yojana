@@ -8,9 +8,9 @@ You need python3 installed.
 - [OSX](https://docs.python-guide.org/starting/install3/osx/) (While you're at it, be sure to "brew install autoconf; brew install automake")
 - [Windows](https://docs.python-guide.org/starting/install3/win/)
 
-- Next checkout repository from git(You might need to install git), or [download zip](https://github.com/jpedrick/Yojana/archive/master.zip)
+Next checkout repository from git([You might need to install git](https://git-scm.com/downloads)), or [download zip](https://github.com/jpedrick/Yojana/archive/master.zip)
 
-- run make to generate virtual environment and install requirements.
+Run 'make' inside yojana folder to generate virtual environment and install requirements.
 
 Then you can run a local script or from the web:
 - ./read_script.py yoga/bikram.json
