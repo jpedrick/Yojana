@@ -6,3 +6,5 @@ num2words
 gtts
 num2words
 pygame
+pyinstaller
+pydub
