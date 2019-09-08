@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 import sys, os, argparse, hashlib, json, time, io
-from urllib.request import urlopen
 
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+import requests
+import urllib
+from AnywhereFile import AnywhereFile
 
-import pygame
 from pydub import AudioSegment
 import num2words
 from gtts import gTTS
 from num2words import num2words
+
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+import pygame
 
 speech_dict = {} 
 sound_dict = {}
@@ -23,14 +26,14 @@ pygame.init()
 
 sound_channel = pygame.mixer.find_channel()
 
-
 def wait_until( t ):
     while( t > time.time() ):
         time.sleep(0.1)
 
 def play_music(music_file, volume=0.8):
     if music_file not in sound_dict:
-        sound_dict[music_file] = pygame.mixer.Sound( AudioSegment.from_mp3( music_file ).export( format = 'ogg' ) )
+        f = AnywhereFile( music_file )
+        sound_dict[music_file] = pygame.mixer.Sound( AudioSegment.from_mp3( f.data ).export( format = 'ogg' ) )
     try:
         sound_channel.set_volume( volume )
         sound_channel.queue( sound_dict[music_file] )
@@ -124,10 +127,13 @@ parser.add_argument( '--voice', type=str )
 parser.add_argument( '--skip', type=int )
 args = parser.parse_args()
 
-with open( args.script ) as script_file:
-    script_dir = os.path.dirname( os.path.abspath( args.script ) )
+script_file = AnywhereFile( args.script )
 
-    script = json.load( script_file )
+if True:
+    script_dir = os.path.dirname( args.script )
+    print( "script root:", script_dir )
+
+    script = json.load( script_file.data )
     voice = "en-in"
 
     if not os.path.exists( cache_dir ):
