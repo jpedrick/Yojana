@@ -189,6 +189,9 @@ def do_sequence( sequence, script, start_at = 0 ):
                 print('play sound: ', i["sound"] )
                 play_sound( '/'.join( [ script_dir, i["sound"] ] ), volume = i.get( "volume", 1 ) )
                 wait_until( end_et )
+            elif "music" in i:
+                print('play music: ', i["song"] )
+                play_music( '/'.join( [ script_dir, i["song"] ] ), volume = i.get( "volume", 1 ) )
             elif "speech"  in i:
                 print( i["speech"] )
                 say_now(i["speech"], voice, volume = i.get( "volume", 1 ) )

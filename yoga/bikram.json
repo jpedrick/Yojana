@@ -267,28 +267,28 @@
     ],
     "wind_removing" : [
       { "speech" : "Pavanamuktāsana, wind removing pose.", "duration" : 1 },
-      { "speech" : "Breeth in.", "duration" : 1 },
+      { "speech" : "Breathe in.", "duration" : 1 },
       { "speech" : "Bring your right knee to your chest and hold tightly it with your hands to feel your thigh compress against your stomach.", "duration" : 15 },
-      { "speech" : "Breeth out. Touch your chin to your right knee.", "duration" : 10 },
-      { "speech" : "Breeth in.", "duration" : 1 },
+      { "speech" : "Breathe out. Touch your chin to your right knee.", "duration" : 10 },
+      { "speech" : "Breathe in.", "duration" : 1 },
       { "speech" : "Savasana. Lie flat.", "duration" : 1 },
       { "speech" : "Bring your right knee to your chest and hold tightly it with your hands to feel your thigh compress against your stomach.", "duration" : 15 },
-      { "speech" : "Breeth out. Touch your chin to your right knee.", "duration" : 10 },
-      { "speech" : "Breeth in.", "duration" : 1 },
+      { "speech" : "Breathe out. Touch your chin to your right knee.", "duration" : 10 },
+      { "speech" : "Breathe in.", "duration" : 1 },
       { "speech" : "Savasana. Lie flat.", "duration" : 3 }
     ],
     "situp_instructional" : [
       { "speech" : "Pādahastāsana. Bikram situp.", "duration" : 0 },
-      { "speech" : "Breeth in.", "duration" : 1 },
+      { "speech" : "Breathe in.", "duration" : 1 },
       { "speech" : "Bring hands above head and hook thumbs.", "duration" : 0 },
-      { "speech" : "While holding your breath, sit up. Breeth out half your breath forcefully.", "duration" : 0 },
+      { "speech" : "While holding your breath, sit up. Breathe out half your breath forcefully.", "duration" : 0 },
       { "sound" : "clap1.mp3", "duration" : 1 },
-      { "speech" : "Fold over to pull your toes from the front, face down onto your legs. Breeth out forcefully.", "duration" : 0 },
+      { "speech" : "Fold over to pull your toes from the front, face down onto your legs. Breathe out forcefully.", "duration" : 0 },
       { "sound" : "clap1.mp3", "duration" : 1 }
     ],
     "situp" : [
       { "speech" : "Pādahastāsana. Bikram situp.", "duration" : 0 },
-      { "speech" : "Breeth in.", "duration" : 2 },
+      { "speech" : "Breathe in.", "duration" : 2 },
       { "speech" : "Sit up.", "duration" : 0 },
       { "sound" : "clap1.mp3", "duration" : 1 },
       { "sound" : "clap1.mp3", "duration" : 1 }
